@@ -6,6 +6,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'sqlite3'
+gem 'slim'
 
 group :development, :test do
   gem "better_errors"
