@@ -1,11 +1,27 @@
 doctype html
 html
   head
-    title ToddyCat
+    title Restaurant App
+    link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet"
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-      link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet"
 
   body
-    == yield
+    #wrap
+      header.navbar.navbar-inverse.navbar-fixed-top role="banner"
+        .container
+          h1.navbar-brand Restaurant App
+      main.container.main role="main"
+        .row
+          .col-md-4.col-md-offset-4
+            ==yield
+    footer
+      .container
+        .row
+          p.text-muted.credit
+            a href="/privacy" Privacy Policy
+            | &bull;
+            a href="/terms" Terms of Use
+            | &bull;
+            | &copy; 2014 Restaurant App
