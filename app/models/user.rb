@@ -5,11 +5,24 @@ class User
   include Mongoid::Timestamps
   attr_accessor :password, :password_confirmation
 
-  before_save :encrypt_password
-
   field :email, type: String
   field :salt, type: String
   field :fish, type: String
+
+  before_save :encrypt_password
+
+  def self.authenticate(email, password)
+    user = User.find_by email email: email
+    user if user and user.authenticate(password)
+
+    # if user and user.authenticate(password)
+    #   user
+    # else
+    #   nil
+    # end
+
+    #true or false
+  end
 
   def authenticate(password)
     self.fish == BCrypt::Engine.hash_secret(password, self.salt)
