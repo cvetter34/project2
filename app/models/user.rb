@@ -12,7 +12,7 @@ class User
   before_save :encrypt_password
 
   def self.authenticate(email, password)
-    user = User.find_by email email: email
+    user = User.find_by email: email
     user if user and user.authenticate(password)
 
     # if user and user.authenticate(password)
@@ -33,7 +33,7 @@ class User
   def encrypt_password
     if password.present?
       self.salt = BCrypt::Engine.generate_salt
-      self.fish = BCrypt::Engine.generate_fish(password, self.salt)
+      self.fish = BCrypt::Engine.hash_secret(password, self.salt)
     end
   end
   # false (tells mongoid not to save)
