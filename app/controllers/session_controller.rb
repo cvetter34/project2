@@ -1,7 +1,7 @@
 class SessionController < ApplicationController
 
   def new
-    render text: "Display the login form."
+    # render text: "Display the login form."
   end
 
   def create
@@ -11,7 +11,7 @@ class SessionController < ApplicationController
 
     if @user
       session[:user_id] = @user.id
-      render text: "Logged in ^_^! #{@user.email}"
+      redirect_to root_url
     else
       render text: "What da fuck are ye?"
     end
@@ -19,6 +19,7 @@ class SessionController < ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
     render text: "Log the user out."
   end
 end
