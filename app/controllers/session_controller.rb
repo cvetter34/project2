@@ -17,7 +17,7 @@ class SessionController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_url
     else
-      # render text: "What da fuck are ye?"
+      flash.now[:alert] = "Unable to log you in. Please check your email and password and try again."
       render :new
     end
 
