@@ -1,5 +1,7 @@
 require 'bcrypt'
 
+PASSWORD_RESET_EXPIRES = 4
+
 class User
   include Mongoid::Document
   include Mongoid::Timestamps
@@ -8,6 +10,8 @@ class User
   field :email, type: String
   field :salt, type: String
   field :fish, type: String
+  field :code, type: String
+  field :expires_at, type: Time
 
   before_save :set_random_password, :encrypt_password
   validates :email, presence: true, uniqueness: {case_sensitive: false}
@@ -27,6 +31,16 @@ class User
 
   def authenticate(password)
     self.fish == BCrypt::Engine.hash_secret(password, self.salt)
+  end
+
+  def set_password_reset
+    self.code = SecureRandom.urlsafe_base64
+    set_expiration
+  end
+
+  def set_expiration
+    self.expires_at = PASSWORD_RESET_EXPIRES.hours.from_now
+    self.save!
   end
 
   protected
