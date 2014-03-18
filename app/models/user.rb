@@ -20,14 +20,10 @@ class User
   def self.authenticate(email, password)
     user = User.find_by email: email
     user if user and user.authenticate(password)
+  end
 
-    # if user and user.authenticate(password)
-    #   user
-    # else
-    #   nil
-    # end
-
-    #true or false
+  def self.find_by_code code
+    User.find_by({:code => code, :expires_at => {"$gte" => Time.now.gmtime}})
   end
 
   def authenticate(password)
