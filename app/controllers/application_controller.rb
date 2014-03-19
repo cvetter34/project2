@@ -6,14 +6,24 @@ class ApplicationController < ActionController::Base
   before_filter :make_action_mailer_user_request_host_and_protocol
 
   def is_authenticated?
-    # check session hash for a :user_id (true/false)
-    # not sesssion [:user_id].nil
+    #check session hash for a :user_id (true/false)
+    # not session[:user_id].nil?
     # redirect_to login_url if session[:user_id].nil?
     redirect_to login_url unless current_user
   end
 
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
+  end
+
+  def log_user_in(user)
+    if user
+      session[:user_id] = user.id
+    end
+  end
+
+  def log_user_out
+    session[:user_id] = nil
   end
 
   private
@@ -23,5 +33,5 @@ class ApplicationController < ActionController::Base
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
 
-end
 
+end
