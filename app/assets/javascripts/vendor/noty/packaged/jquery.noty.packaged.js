@@ -560,7 +560,7 @@ window.noty = function noty(options) {
 	$.noty.layouts.bottomLeft = {
 		name: 'bottomLeft',
 		options: { // overrides options
-			
+
 		},
 		container: {
 			object: '<ul id="noty_bottomLeft_layout_container" />',
@@ -603,7 +603,7 @@ window.noty = function noty(options) {
 	$.noty.layouts.bottomRight = {
 		name: 'bottomRight',
 		options: { // overrides options
-			
+
 		},
 		container: {
 			object: '<ul id="noty_bottomRight_layout_container" />',
@@ -646,7 +646,7 @@ window.noty = function noty(options) {
 	$.noty.layouts.center = {
 		name: 'center',
 		options: { // overrides options
-			
+
 		},
 		container: {
 			object: '<ul id="noty_center_layout_container" />',
@@ -681,7 +681,7 @@ window.noty = function noty(options) {
 						top: ($(window).height() - actual_height) / 2 + 'px'
 					}, 500);
 				}
-				
+
 			}
 		},
 		parent: {
@@ -933,7 +933,7 @@ window.noty = function noty(options) {
 	$.noty.layouts.topLeft = {
 		name: 'topLeft',
 		options: { // overrides options
-			
+
 		},
 		container: {
 			object: '<ul id="noty_topLeft_layout_container" />',
@@ -976,7 +976,7 @@ window.noty = function noty(options) {
 	$.noty.layouts.topRight = {
 		name: 'topRight',
 		options: { // overrides options
-			
+
 		},
 		container: {
 			object: '<ul id="noty_topRight_layout_container" />',

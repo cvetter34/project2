@@ -138,5 +138,6 @@ DEPENDENCIES
   pry
   rails (= 4.0.3)
   slim
+  sprockets
   sqlite3
   uglifier

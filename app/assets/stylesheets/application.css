@@ -12,6 +12,10 @@
  *= require_tree .
  */
 
+/*header {
+  height: 15%;
+}*/
+
 html,
 body {
   height: 100%;
@@ -56,6 +60,11 @@ footer {
 footer > .container {
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.maps {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 logout-link {
