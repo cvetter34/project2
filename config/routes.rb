@@ -1,6 +1,6 @@
 Project2::Application.routes.draw do
 
-  root 'site#index'
+  root 'splash#home'
 
   get    'login'  => 'session#new'
   post   'login'  => 'session#create'
@@ -21,5 +21,8 @@ Project2::Application.routes.draw do
   get 'photos' => 'splash#photos'
   get 'location' => 'splash#location'
   get 'contact' => 'splash#contact'
+
+  get 'admin/menuedit' => 'admin#menuedit', as: :menuedit
+  patch 'admin/menuedit' => 'admin#update'
 
 end

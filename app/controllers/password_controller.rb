@@ -1,4 +1,4 @@
-  class PasswordController < ApplicationController
+class PasswordController < ApplicationController
 
   LINK_EXPIRED = "Your reset link has expired, Please generate a new one"
   PASSWORD_RESET = "Your password has been successfully reset."

@@ -13,7 +13,8 @@ temp_password = "123"
 User.create([
   {email: "cvetter34@gmail.com",
    password: temp_password,
-   password_confirmation: temp_password
+   password_confirmation: temp_password,
+   admin: true
   },
   {email: "cvbusinessphotos@gmail.com",
    password: temp_password,
@@ -23,5 +24,14 @@ User.create([
    password: temp_password,
    password_confirmation: temp_password
   }
+
+  ])
+
+ContentManagement.create([
+  menuItem1: "Hofbrau Premium Lager",
+  menuItem2: "Hofbrau Hefe Weizen",
+  menuItem3: "Hofbrau Dunkel",
+  menuItem4: "Schwarzbier",
+  menuItem5: "Leichtes Weizen"
 
   ])

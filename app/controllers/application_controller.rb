@@ -17,9 +17,12 @@ class ApplicationController < ActionController::Base
   end
 
   def log_user_in(user, notice = nil)
-    if user
+    if user.admin
       session[:user_id] = user.id
-      redirect_to root_url, notice: notice
+      redirect_to root_url, alert: "You are logged in as an admin."
+    else
+      session[:user_id] = user.id
+      redirect_to root_url, notice: "You are logged in."
     end
   end
 

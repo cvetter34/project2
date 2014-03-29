@@ -8,8 +8,9 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
+ *
  */
 
 /*header {
@@ -17,7 +18,7 @@
 }*/
 
 html,
-body {
+body{
   height: 100%;
   /*background-color: hsla( 0, 0.0%, 100.0%, 1 );*/
 }
@@ -26,12 +27,12 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -60px; /* Negative indent footer by its height */
+/*  margin: 0 auto -60px;  Negative indent footer by its height*/
   padding: 0 0 60px;    /* Pad bottom by footer height */
 }
 
 h1 {
-  margin: 0;
+  margin-bottom: 30px;
   padding: 0;
 }
 
@@ -43,14 +44,12 @@ legend {
   border-bottom: 1px solid #5cb85c;
 }
 
-.main {
-  padding-top: 80px;
-}
-
 footer {
   height: 60px;
   background-color: hsla( 0, 0.0%, 96.0%, 1 );
 }
+
+
 
 .container .credit {
   text-align: right;
@@ -62,11 +61,29 @@ footer > .container {
   padding-right: 15px;
 }
 
-.maps {
+#main_map, #page {
   margin-left: auto;
   margin-right: auto;
 }
 
 logout-link {
   margin-top: 8px;
+}
+
+.navbar .navbar-inverse {
+  border-bottom-width: 0px;
+}
+
+footer {
+  background: #222;
+}
+
+.links{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.address {
+  margin-left: auto;
+  margin-right: auto;
 }
