@@ -18,42 +18,74 @@
 }*/
 
 html,
-body{
+body {
   height: 100%;
-  /*background-color: hsla( 0, 0.0%, 100.0%, 1 );*/
+  background: url("/assets/hofbrauhaus_background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: black;
 }
 
 #wrap {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-/*  margin: 0 auto -60px;  Negative indent footer by its height*/
+  margin: 0 auto -60px;
   padding: 0 0 60px;    /* Pad bottom by footer height */
 }
 
 h1 {
-  margin-bottom: 30px;
-  padding: 0;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 50px;
 }
 
-legend {
-  text-align: left;
-  font-size: 130%;
-  line-height: 1.5;
-  color: #5cb85c;
-  border-bottom: 1px solid #5cb85c;
+.logo {
+  width: 70px;
+  height: 70px;
+  float: left;
 }
 
-footer {
+.address {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.iframecontainer{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menudisplay {
+  font-size: 20px;
+  text-align: center;
+  list-style-type: none;
+}
+
+.loglinks {
+  font-size: 18px;
+}
+
+#links img {
+  width: 220px;
+}
+
+.img-thumbnail {
+  border-width: 3px;
+}
+
+navbar {
+  height: 20px;
+}
+
+#footer {
   height: 60px;
-  background-color: hsla( 0, 0.0%, 96.0%, 1 );
 }
 
-
-
-.container .credit {
-  text-align: right;
-  margin: 20px 0;
+#footer {
+  background-color: #f5f5f5;
 }
 
 footer > .container {
@@ -61,29 +93,7 @@ footer > .container {
   padding-right: 15px;
 }
 
-#main_map, #page {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-logout-link {
-  margin-top: 8px;
-}
-
-.navbar .navbar-inverse {
-  border-bottom-width: 0px;
-}
-
-footer {
-  background: #222;
-}
-
-.links{
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.address {
-  margin-left: auto;
-  margin-right: auto;
+.container .credit {
+  text-align: right;
+  margin: 20px 0;
 }

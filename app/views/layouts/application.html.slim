@@ -5,6 +5,7 @@ html
     link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet"
     link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" media="all" rel="stylesheet"
     link href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css" media="all" rel="stylesheet"
+    link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'
     = stylesheet_link_tag "bootstrap-image-gallery.min.css", media: "all"
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
@@ -15,9 +16,10 @@ html
     #wrap
 
       header.navbar.navbar-inverse.navbar-fixed-top role="banner"
-        .navbar.navbar-inverse.navbar-fixed-top role="navigation"
+        navbar.navbar-inverse.navbar-fixed-top role="navigation"
           .container
             .navbar-header
+              = image_tag("hofbrauhaus_logo.png", :alt => "Logo", :class => "logo")
               a.navbar-brand href="../home"  Hofbräuhaus
             .collapse.navbar-collapse
               ul.nav.navbar-nav
@@ -32,26 +34,19 @@ html
                 li
                   a href="../contact" Contact
 
-            .pull-right
-              = link_to "Register", register_url unless current_user
-              = link_to "Login", login_url unless current_user
-
-            .pull-right
-              = link_to "Log Out", logout_url, method: :delete, class: "btn btn-danger logout-link" if current_user
-              = link_to "Menu Edit", menuedit_url, class: "btn btn-info" if current_user and current_user.admin
+              .pull-right
+                = link_to "Menu Edit", menuedit_url, class: "btn btn-info" if current_user and current_user.admin
+                = link_to "Log Out", logout_url, method: :delete, class: "btn btn-danger logout-link" if current_user
 
 
-          main.container.main role="main"
-          .row
-            .col-md-4.col-md-offset-4
-              == yield
+              .pull-right.loglinks
+                = link_to "Login", login_url unless current_user
+                = link_to "   Register", register_url unless current_user
 
+      main.container.main role="main"
+        == yield
 
-    script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"
-    script src="assets/bootstrap-image-gallery.min.js"
-
-
-    footer
+    #footer
       .container
         .row
           p.text-muted.credit
@@ -60,4 +55,7 @@ html
             = link_to "Terms of Use", terms_url
             | &bull;
             | &copy; 2014 CVFotografie
-    == flash_noty_script_tag
+      == flash_noty_script_tag
+
+script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"
+script src="assets/bootstrap-image-gallery.min.js"

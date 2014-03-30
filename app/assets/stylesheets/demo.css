@@ -19,7 +19,7 @@ h1 {
     font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
 }
 a {
-    color: orange;
+    color: HSL(60, 100%, 50%);
 }
 a:hover {
     color: lightblue;

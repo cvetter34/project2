@@ -1,19 +1,22 @@
-= form_for :user, url: register_url, html: { id: "registrationform" } do |f|
-  fieldset
-    legend Please register
-    / .form-group = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
-    .form-group
-      = f.label :email, class: "sr-only"
-      = f.text_field :email, class: "form-control", placeholder: "Email address"
+.col-md-3
+.col-md-6
+  = form_for :user, url: register_url, html: { id: "registrationform" } do |f|
+    fieldset
+      legend Please register
+      / .form-group = flash.map {| key, value| "#{key.capitalize}: #{value}"}.join(";")
+      .form-group
+        = f.label :email, class: "sr-only"
+        = f.text_field :email, class: "form-control", placeholder: "Email address"
 
 
-    .form-group
-      = f.label :password, class: "sr-only"
-      = f.password_field :password, class: "form-control", placeholder: "Password"
-    .form-group
-      = f.label :password_confirmation, class: "sr-only"
-      = f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation"
-    .form-group
-      = f.submit "Register", class: "btn btn-success"
+      .form-group
+        = f.label :password, class: "sr-only"
+        = f.password_field :password, class: "form-control", placeholder: "Password"
+      .form-group
+        = f.label :password_confirmation, class: "sr-only"
+        = f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation"
+      .form-group
+        = f.submit "Register", class: "btn btn-success"
 
-p To reset your password, simply leave the password field blank and submit the form.
+  p To reset your password, simply leave the password field blank and submit the form.
+.col-md-3
