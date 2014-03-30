@@ -6,7 +6,7 @@ class SplashController < ApplicationController
   end
 
   def menu
-    @items = ContentManagement.all.entries.first
+    @items = ContentManagement.all.entries
     @message = "OMG HAY"
   end
 

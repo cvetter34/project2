@@ -1,5 +1,5 @@
 class AdminController < ApplicationController
-
+ before_action :is_admin?
   def menuedit
     @items = ContentManagement.all.entries.first
   end
@@ -13,7 +13,7 @@ class AdminController < ApplicationController
   private
 
   def menu_params
-    params.require(:content_management).permit(:menuItem1, :menuItem2, :menuItem3, :menuItem4, :menuItem5)
+    params.require(:content_management).permit(:name, :price, :description, :new)
   end
 
 end

@@ -12,6 +12,10 @@ class ApplicationController < ActionController::Base
     redirect_to login_url unless current_user
   end
 
+  def is_admin?
+    redirect_to login_url unless current_user and current_user.admin
+  end
+
   def current_user
     @current_user ||= User.find_by(id: session[:user_id])
   end

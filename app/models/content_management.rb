@@ -3,11 +3,10 @@ class ContentManagement
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :menuItem1, type: String
-  field :menuItem2, type: String
-  field :menuItem3, type: String
-  field :menuItem4, type: String
-  field :menuItem5, type: String
+  field :name, type: String
+  field :price, type: String
+  field :description, type: String
+  field :new, type: Boolean
 
   # field :menu
   # field :homepage

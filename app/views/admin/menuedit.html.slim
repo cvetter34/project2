@@ -1,27 +1,17 @@
 = form_for @items, url: menuedit_url, html: { id: "menuform" } do |f|
   fieldset
-    legend Submit menu changes here
+    legend Menu Changes
     .form-group
-      = f.label :menuItem1, class: "sr-only"
-      = f.text_field :menuItem1, class: "form-control", placeholder: ""
+      = f.label :name, class: "sr-only"
+      = f.text_field :name, class: "form-control", placeholder: ""
 
     .form-group
-      = f.label :menuItem2, class: "sr-only"
-      = f.text_field :menuItem2, class: "form-control", placeholder: ""
+      = f.label :price, class: "sr-only"
+      = f.text_field :price, class: "form-control", placeholder: ""
 
     .form-group
-      = f.label :menuItem3, class: "sr-only"
-      = f.text_field :menuItem3, class: "form-control", placeholder: ""
-
-    .form-group
-      = f.label :menuItem4, class: "sr-only"
-      = f.text_field :menuItem4, class: "form-control", placeholder: ""
-
-    .form-group
-      = f.label :menuItem5, class: "sr-only"
-      = f.text_field :menuItem5, class: "form-control", placeholder: ""
+      = f.label :description, class: "sr-only"
+      = f.text_field :description, class: "form-control", placeholder: ""
 
     .form-group
       = f.submit "Submit Changes", class: "btn btn-success"
-
-p To reset your password, simply leave the password field blank and submit the form.

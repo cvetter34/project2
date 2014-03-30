@@ -39,6 +39,7 @@ body {
 h1 {
   font-family: 'Hammersmith One', sans-serif;
   font-size: 50px;
+  color: #cab451;
 }
 
 .logo {
@@ -96,4 +97,10 @@ footer > .container {
 .container .credit {
   text-align: right;
   margin: 20px 0;
+}
+
+#wrap p {
+  font-size: 20px;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
 }
