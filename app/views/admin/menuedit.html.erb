@@ -1,0 +1,19 @@
+<%= form_tag menuedit_url :method => :patch do %>
+
+  <% for item in @items %>
+    <%= fields_for "items[]", item do |f| %>
+    <legend><%= item.name %></legend>
+        <div class="form-group">
+        <%= f.text_field :name, class: "form-control", placeholder: "" %>
+        <%= f.text_field :price, class: "form-control", placeholder: "" %>
+        <%= f.text_field :description, class: "form-control", placeholder: "" %>
+        </div>
+
+    <% end %>
+  <% end %>
+
+
+  <p><%= submit_tag "Submit" %></p>
+<% end %>
+
+

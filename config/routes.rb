@@ -24,5 +24,7 @@ Project2::Application.routes.draw do
 
   get 'admin/menuedit' => 'admin#menuedit', as: :menuedit
   patch 'admin/menuedit' => 'admin#update'
+  post 'admin/menuedit' => 'admin#update'
+
 
 end
