@@ -1,0 +1,6 @@
+<%= stylesheet_link_tag    "contact_mailer", media: "all", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "contact_mailer", "data-turbolinks-track" => true %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<p>New comment email from <%= "#{ @name }" %></p>
+<p><%= @body %></p>

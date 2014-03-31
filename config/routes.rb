@@ -26,5 +26,6 @@ Project2::Application.routes.draw do
   patch 'admin/menuedit' => 'admin#update'
   post 'admin/menuedit' => 'admin#update'
 
+  post '/send_mail' => 'contact#send_mail'
 
 end

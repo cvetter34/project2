@@ -25,7 +25,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  color: black;
+  color: #222;
 }
 
 #wrap {
@@ -39,7 +39,7 @@ body {
 h1 {
   font-family: 'Hammersmith One', sans-serif;
   font-size: 50px;
-  color: #2e294d;
+  color: #2e3672;
 }
 
 .logo {
@@ -52,6 +52,8 @@ h1 {
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+  font-size: 25px;
+  font-family: 'Georgia, Playfair Display', serif;
 }
 
 .iframecontainer{
@@ -66,7 +68,11 @@ h1 {
 }
 
 .loglinks {
-  font-size: 18px;
+  margin-top: 8px;
+}
+
+.logbuttons {
+  margin-top: 8px;
 }
 
 #links img {
@@ -84,11 +90,8 @@ navbar {
 }
 
 #footer {
+  background-color: #222;
   height: 60px;
-}
-
-#footer {
-  background-color: #f5f5f5;
 }
 
 footer > .container {
@@ -105,4 +108,9 @@ footer > .container {
   font-size: 25px;
   font-family: 'Georgia, Playfair Display', serif;
   text-align: center;
+}
+
+.jumbotron {
+  background-color: rgba(0,0,0,0.5);
+  color: white;
 }
