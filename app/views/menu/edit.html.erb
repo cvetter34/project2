@@ -1,4 +1,4 @@
-<%= form_tag menuedit_url :method => :patch do %>
+<%= form_tag edit_url :method => :patch do %>
 
   <% for item in @items %>
     <%= fields_for "items[]", item do |f| %>

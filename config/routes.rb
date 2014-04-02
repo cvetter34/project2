@@ -13,11 +13,11 @@ Project2::Application.routes.draw do
   get   'reset/:code' => 'password#edit', as: :reset
   patch 'reset/:code' => 'password#update'
 
-  get   'admin/menuedit' => 'admin#menuedit', as: :menuedit
-  patch 'admin/menuedit' => 'admin#update'
-  post  'admin/menuedit' => 'admin#update'
+  get   'edit' => 'menu#edit'
+  patch 'edit' => 'menu#update'
+  post  'edit' => 'menu#update'
 
-  post '/send_mail' => 'contact#send_mail'
+  post 'send_mail' => 'contact#send_mail'
 
   get  'privacy' => 'site#privacy'
   get    'terms' => 'site#terms'

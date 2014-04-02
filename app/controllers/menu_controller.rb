@@ -1,6 +1,6 @@
-class AdminController < ApplicationController
+class MenuController < ApplicationController
  before_action :is_admin?
-  def menuedit
+  def edit
     @items = Menu.all.entries
   end
 
