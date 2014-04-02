@@ -54,6 +54,7 @@ h1 {
   margin-left: auto;
   font-size: 25px;
   font-family: 'Georgia, Playfair Display', serif;
+  color: white;
 }
 
 .iframecontainer{
@@ -113,4 +114,12 @@ footer > .container {
 .jumbotron {
   background-color: rgba(0,0,0,0.5);
   color: white;
+}
+
+.list-group-item {
+  background-color: rgba(255,255,255,0.8);
+}
+
+h3 {
+  color: #1a213d;
 }
