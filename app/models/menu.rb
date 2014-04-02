@@ -1,4 +1,4 @@
-class ContentManagement
+class Menu
 
   include Mongoid::Document
   include Mongoid::Timestamps

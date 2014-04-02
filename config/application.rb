@@ -6,9 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
-    config.action_mailer.delivery_method = :sendmail
-    config.action_mailer.perform_deliveries = true
-    config.action_mailer.raise_delivery_errors = true
+    # config.action_mailer.delivery_method = :sendmail
+    # config.action_mailer.perform_deliveries = true
+    # config.action_mailer.raise_delivery_errors = true
 
 module Project2
   class Application < Rails::Application

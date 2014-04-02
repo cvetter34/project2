@@ -26,8 +26,8 @@
 #   }
 
 #   ])
-ContentManagement.destroy_all
-# ContentManagement.create([
+Menu.destroy_all
+# Menu.create([
 #   menuItem1: "Hofbrau Premium Lager",
 #   menuItem2: "Hofbrau Hefe Weizen",
 #   menuItem3: "Hofbrau Dunkel",
@@ -37,32 +37,32 @@ ContentManagement.destroy_all
 #   ])
 
 
-ContentManagement.create([
+Menu.create([
   name: "Hofbrau Premium Lager",
   price: "$4.99",
   description: "A simple, full flavor lager with a crisp finish. the beer hofbrauhaus has been famous for since 1589",
   ])
 
-ContentManagement.create([
+Menu.create([
   name: "Hofbrau Hefe Weizen",
   price: "$3.99",
   description: "Speciality, born in munich - loved by the world. rich, fairly sweet old-style wheat beer, brewed to create a taste of a wonderful combination of banana and clove flavors",
   ])
 
-ContentManagement.create([
+Menu.create([
   name: "Hofbrau Dunkel",
   price: "$8.99",
   description: "For centuries munich's favorite beer. our dark lager. it has a light body, is easy to drink, with simple roasted malt flavor and slight caramel undertones",
   ])
 
-ContentManagement.create([
+Menu.create([
   name: "Schwarzbier",
   price: "$8.99",
   description: "A dark Lager with an opaque, black color, and a full, chocolaty flavor. A rich blend of caramel & chocolate malts creates a malty, sweet flavor with moderate hop character (5.5% Alcohol By Volume)",
   new: true
   ])
 
-ContentManagement.create([
+Menu.create([
   name: "Leichtes Weizen",
   price: "$7.99",
   description: "The full taste from the Wheat, yeast and Hop but less alcohol (3.8% Alcohol By Volume)",

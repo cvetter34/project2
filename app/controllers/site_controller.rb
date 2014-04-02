@@ -3,7 +3,7 @@ class SiteController < ApplicationController
   before_action :is_authenticated?
 
   def index
-    # render json: User.all.entries
+    @splash = User.all.entries.sample
     @users = User.all.entries
   end
 
@@ -12,4 +12,19 @@ class SiteController < ApplicationController
 
   def terms
   end
+
+  def menu
+    @items = Menu.all.entries
+    @message = "OMG HAY"
+  end
+
+  def photos
+  end
+
+  def location
+  end
+
+  def contact
+  end
+
 end
