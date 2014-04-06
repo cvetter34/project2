@@ -13,10 +13,10 @@ class SiteController < ApplicationController
   def terms
   end
 
-  def menu
-    @items = Menu.all.entries
-    @message = "OMG HAY"
-  end
+  # def menu
+  #   @items = Menu.all.entries
+  #   @message = "OMG HAY"
+  # end
 
   def photos
   end

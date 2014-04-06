@@ -1,0 +1,18 @@
+h1 Menus
+
+/ p = link_to "New Menu", new_menu_url, class: "btn btn-success"
+
+table.table.table-striped.table-border style="background-color: hsla(0, 0%, 0%, 0.3)"
+  thead
+    tr
+      th Name
+      th Title
+      th &nbsp;
+  tbody
+    - @menus.each do |menu|
+      tr
+        td = link_to menu.name, menu_url(menu)
+        td = menu.title
+        td
+          = link_to "Edit", edit_menu_url(menu), class: "btn btn-success"
+          = link_to "Delete", menu_url(menu), class: "btn btn-danger", method: :delete, confirm: "Are you sure?"

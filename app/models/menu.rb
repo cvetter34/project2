@@ -1,14 +1,10 @@
 class Menu
-
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :name, type: String
-  field :price, type: String
-  field :description, type: String
-  field :new, type: Boolean
+  embeds_many :menu_items
+  accepts_nested_attributes_for :menu_items
 
-  # field :menu
-  # field :homepage
-  # field :contact_info
+  field :name
+  field :title
 end

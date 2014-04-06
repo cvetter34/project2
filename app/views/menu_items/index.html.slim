@@ -1,0 +1,20 @@
+h1 Menu Items for Menu "#{@menu.name}"
+
+p = link_to "New Menu Item", new_menu_menu_item_url(@menu), class: "btn btn-success"
+
+table.table.table-striped.table-border style="background-color: hsla(0, 0%, 0%, 0.3)"
+  thead
+    tr
+      th Name
+      th Price
+      th Description
+      th &nbsp;
+  tbody
+    - @menu_items.each do |menu_item|
+      tr
+        td = link_to menu_item.name, menu_menu_item_url(@menu, menu_item)
+        td = number_to_currency(menu_item.price / 100.0)
+        td = menu_item.description
+        td
+          = link_to "Edit", edit_menu_menu_item_url(@menu, menu_item), class: "btn btn-success"
+          =< link_to "Delete", menu_menu_item_url(@menu, menu_item), class: "btn btn-danger", method: :delete, confirm: "Are you sure?"

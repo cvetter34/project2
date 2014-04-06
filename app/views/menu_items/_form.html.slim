@@ -1,0 +1,12 @@
+= form_for [ @menu, @menu_item ] do |f|
+  .form-group
+    = f.label :name, class: "sr-only"
+    = f.text_field :name, class: "form-control", placeholder: "Name for menu item"
+  .form-group
+    = f.label :price, class: "sr-only"
+    = f.number_field :price, class: "form-control", placeholder: "Price of menu item"
+  .form-group
+    = f.label :description, class: "sr-only"
+    = f.text_area :description, class: "form-control", placeholder: "Description of menu item"
+  .form-group
+    = f.submit class: "btn btn-warning"

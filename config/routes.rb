@@ -2,6 +2,10 @@ Project2::Application.routes.draw do
 
   root 'site#index'
 
+  resources :menus do
+    resources :menu_items
+  end
+
   get    'login'  => 'session#new'
   post   'login'  => 'session#create'
   delete 'logout' => 'session#destroy'
@@ -12,10 +16,6 @@ Project2::Application.routes.draw do
 
   get   'reset/:code' => 'password#edit', as: :reset
   patch 'reset/:code' => 'password#update'
-
-  get   'edit' => 'menu#edit'
-  patch 'edit' => 'menu#update'
-  post  'edit' => 'menu#update'
 
   post 'send_mail' => 'contact#send_mail'
 

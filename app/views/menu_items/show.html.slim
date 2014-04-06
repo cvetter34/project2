@@ -1,0 +1,7 @@
+h1 = @menu_item.name
+
+p Price: #{number_to_currency(@menu_item.price / 100.0)}
+
+p = @menu_item.description
+
+p = link_to "All menu items", menu_menu_items_url(@menu), class: "btn btn-success"
