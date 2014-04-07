@@ -15,7 +15,7 @@ class MenusController < ApplicationController
   end
 
   def create
-    if @menu.save
+    if @menu = Menu.create(menu_params)
       redirect_to menu_url(@menu), notice: "#{@menu.name} created."
     else
       render :new, alert: "#{@menu.name} won't save."
@@ -29,7 +29,7 @@ class MenusController < ApplicationController
 
   def update
     if @menu.update_attributes( menu_params )
-      redirect_to menu_url(@menu), notice: "#{@menu.name} updated."
+      redirect_to menus_url(@menu), notice: "#{@menu.name} updated."
     else
       render :new, alert: "#{@menu.name} won't save."
     end
